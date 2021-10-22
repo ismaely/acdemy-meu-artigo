@@ -32,7 +32,6 @@ paramiko==2.6.0
 python-docx==0.8.10
 pexpect==4.6.0
 Pillow==7.0.0
-pkg-resources==0.0.0
 protobuf==3.6.1
 psycopg2-binary==2.8.6
 pycairo==1.16.2
