@@ -1,4 +1,5 @@
 .DS_store
 *.pyc
+static/admin/**
 static/assets/**
 db.sqlite3
