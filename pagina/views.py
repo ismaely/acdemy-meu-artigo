@@ -6,10 +6,15 @@ from django.urls import reverse
 
 def index(request):
     context = {}
-    return render(request, 'base.html', context)
+    return render(request, 'pagina/index.html', context)
 
 
 
-def about(request):
+def registar(request):
     context = {}
-    return render(request, 'pagina/about.html', context)
+    return render(request, 'pagina/registar.html', context)
+
+
+def loginUser(request):
+    context = {}
+    return render(request, 'pagina/registar.html', context)

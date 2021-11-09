@@ -1,732 +1,206 @@
 <html lang="en">
-{% load static %}
-<head>
+  {% load static %}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="repositorio científico angolano" />
+    <meta name="keywords" content="angola, educação, obras, repositório, cientifico" />
+    <meta name="author" content="gunza ismael" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static '/assets/img/apple-icon.png' %}" />
+    <link rel="icon" type="image/png" href="{% static '/assets/img/favicon.png' %}" />
+    <title>REPOSITÓRIO ACADÉMICO CIÉNTÍFICO ANGOLANO</title>
 
-<meta charset="utf-8" />
-<meta name="description" content="repositorio científico angolano">
- <meta name="keywords" content="angola, educação, obras, repositório, cientifico">
- <meta name="author" content="gunza ismael">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="apple-touch-icon" sizes="76x76" href="{% static '/assets/img/apple-icon.png' %}">
-<link rel="icon" type="image/png" href="{% static '/assets/img/favicon.png' %}">
-<title>
- REPOSITÓRIO ACADÉMICO CIÉNTÍFICO ANGOLANO
-</title>
+    <link href="{% static '/assets/css/nucleo-icons.css' %}" rel="stylesheet" />
+    <link href="{% static '/assets/css/nucleo-svg.css' %}" rel="stylesheet" />
+    <script src="{% static '/assets/js/42d5adcbca.js' %}" crossorigin="anonymous"></script>
 
-<link href="{% static '/assets/css/nucleo-icons.css' %}" rel="stylesheet" />
-<link href="{% static '/assets/css/nucleo-svg.css' %}" rel="stylesheet" />
-<script src="{% static '/assets/js/42d5adcbca.js' %}" crossorigin="anonymous"></script>
-
-<link id="pagestyle" href="{% static '/assets/css/material-kit.css' %}" rel="stylesheet" />
-</head>
-<body class="index-page bg-gray-200">
-
-  <!-- Navbar -->
-<div class="container position-sticky z-index-sticky top-0"><div class="row"><div class="col-12">
-<nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
-  <div class="container-fluid px-0">
-    <a class="navbar-brand font-weight-bolder ms-sm-3" href="#" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
-     <h4>BANTUS</h4>
-    </a>
-    <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon mt-2">
-        <span class="navbar-toggler-bar bar1"></span>
-        <span class="navbar-toggler-bar bar2"></span>
-        <span class="navbar-toggler-bar bar3"></span>
-      </span>
-    </button>
-    <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
-      <ul class="navbar-nav navbar-nav-hover ms-auto">
-        <li class="nav-item dropdown dropdown-hover mx-2">
-          <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-            Home
-          </a>
-          <!--<div class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages">
-            <div class="d-none d-lg-block">
-  
-          <a href="#" class="dropdown-item border-radius-md text-dark font-weight-bolder d-flex align-items-center px-1 ">
-            <span>Author</span>
-          </a>
-        
-          <a href="#" class="dropdown-item border-radius-md text-dark font-weight-bolder d-flex align-items-center px-1 ">
-            <span>Sign In</span>
-          </a>
-        </div>
-
-          </div>-->
-        </li>
-
-        <li class="nav-item dropdown dropdown-hover mx-2">
-          <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
-            
-            Serviços
-            <img src="{% static '/assets/img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-auto ms-md-2">
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
-            <div class="d-none d-lg-block">
-              <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
-                  <div class="w-100 d-flex align-items-center justify-content-between">
-                      <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Tese de Doutoramento</h6>
-                    
-                  </div>
-                </a>
-              </li>
-              <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
-                  <div class="w-100 d-flex align-items-center justify-content-between">
-                      <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Dissertação
-                     Monografias</h6>
-                  </div>
-                </a>
-              </li>
-              <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
-                  <div class="w-100 d-flex align-items-center justify-content-between">
-                      <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-                     Artigos Ciéntifico</h6>
-                  </div>
-                </a>
-              </li>
-              <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
-                  <div class="w-100 d-flex align-items-center justify-content-between">
-                      <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-                     Relatórios</h6>
-                  </div>
-                </a>
-              </li>
-              <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-                <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
-                  <div class="w-100 d-flex align-items-center justify-content-between">
-                      <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-                     Pesquisas</h6>
-                  </div>
-                </a>
-              </li>
-            </div>
-
-          </ul>
-        </li>
-
-        <li class="nav-item dropdown dropdown-hover mx-2">
-          <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
-           Parcerias
-            
-            <img src="{% static '/assets/img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-auto ms-md-2">
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuDocs">
-            <div class="d-none d-lg-block">
-          <ul class="list-group">
-            <li class="nav-item list-group-item border-0 p-0">
-              <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
-                <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-                  Instituições Estatais</h6>
+    <link id="pagestyle" href="{% static '/assets/css/material-kit.css' %}" rel="stylesheet" />
+  </head>
+  <body class="index-page bg-gray-200">
+    <!-- Navbar -->
+    <div class="container position-sticky z-index-sticky top-0">
+      <div class="row">
+        <div class="col-12">
+          <nav class="navbar navbar-expand-lg blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+            <div class="container-fluid px-0">
+              <a class="navbar-brand font-weight-bolder ms-sm-3" href="#" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
+                <h4>BANTUS</h4>
               </a>
-            </li>
-            <li class="nav-item list-group-item border-0 p-0">
-              <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
-                <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-                  Instituições privadas</h6>
-              </a>
-            </li>
-          
+              <button
+                class="navbar-toggler shadow-none ms-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navigation"
+                aria-controls="navigation"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon mt-2">
+                  <span class="navbar-toggler-bar bar1"></span>
+                  <span class="navbar-toggler-bar bar2"></span>
+                  <span class="navbar-toggler-bar bar3"></span>
+                </span>
+              </button>
+              <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+                <ul class="navbar-nav navbar-nav-hover ms-auto">
+                  <li class="nav-item dropdown dropdown-hover mx-2">
+                    <a href="{% url 'pagina:index' %}" class="nav-link ps-2 d-flex cursor-pointer align-items-center"> Home </a>
+                  </li>
+
+                  <li class="nav-item dropdown dropdown-hover mx-2">
+                    <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
+                      Serviços
+                      <img src="{% static '/assets/img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-auto ms-md-2" />
+                    </a>
+                    <ul
+                      class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3"
+                      aria-labelledby="dropdownMenuBlocks"
+                    >
+                      <div class="d-none d-lg-block">
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                          <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
+                            <div class="w-100 d-flex align-items-center justify-content-between">
+                              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Tese de Doutoramento</h6>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                          <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
+                            <div class="w-100 d-flex align-items-center justify-content-between">
+                              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Dissertação Monografias</h6>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                          <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
+                            <div class="w-100 d-flex align-items-center justify-content-between">
+                              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Artigos Ciéntifico</h6>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                          <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
+                            <div class="w-100 d-flex align-items-center justify-content-between">
+                              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Relatórios</h6>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                          <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
+                            <div class="w-100 d-flex align-items-center justify-content-between">
+                              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Pesquisas</h6>
+                            </div>
+                          </a>
+                        </li>
+                      </div>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item dropdown dropdown-hover mx-2">
+                    <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
+                      Parcerias
+
+                      <img src="{% static '/assets/img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-auto ms-md-2" />
+                    </a>
+                    <ul
+                      class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-lg"
+                      aria-labelledby="dropdownMenuDocs"
+                    >
+                      <div class="d-none d-lg-block">
+                        <ul class="list-group">
+                          <li class="nav-item list-group-item border-0 p-0">
+                            <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
+                              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Instituições Estatais</h6>
+                            </a>
+                          </li>
+                          <li class="nav-item list-group-item border-0 p-0">
+                            <a class="dropdown-item py-2 ps-3 border-radius-md" href="#">
+                              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Instituições privadas</h6>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item dropdown dropdown-hover mx-2">
+                    <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false"> Sobre nós </a>
+                  </li>
+                  <li class="nav-item ms-lg-auto">
+                    <a class="nav-link nav-link-icon me-2" href="{% url 'pagina:registar-se'%}">
+                      <i class="fa fa-user me-1"></i>
+                      <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Star us on Github">Regista-se</p>
+                    </a>
+                  </li>
+                  <li class="nav-item my-auto ms-3 ms-lg-0">
+                    <a href="#" class="btn btn-sm bg-gradient-dark mb-0 me-1 mt-2 mt-md-0">Login</a>
+                  </li>
                 </ul>
               </div>
-
-          </ul>
-        </li>
-
-
-        <li class="nav-item dropdown dropdown-hover mx-2">
-          <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
-           Sobre nós
-            
-          </a>
-         
-        </li>
-        <li class="nav-item ms-lg-auto">
-          <a class="nav-link nav-link-icon me-2" href="#" target="_blank">
-            <i class="fa fa-user me-1"></i>
-            <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Star us on Github">Regista-se</p>
-          </a>
-        </li>
-        <li class="nav-item my-auto ms-3 ms-lg-0">
-
-          <a href="#" class="btn btn-sm  bg-gradient-dark  mb-0 me-1 mt-2 mt-md-0">Login</a>
-
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<!-- End Navbar -->
-</div></div></div>
-
-
-
-
-<header class="header-2">
-  <div class="page-header min-vh-75 relative" style="background-image: url('../static/assets/img/bg10.jpg')">
-    <span class="mask bg-gradient-dark opacity-4"></span>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7 text-center mx-auto">
-          <h2 class="text-white pt-7 mt-n5">REPOSITÓRIO ACADÉMICO CIÉNTÍFICO ANGOLANO</h2>
-          <p class="lead text-white mt-1"> <br/> 
-            Ajudamos você a terminar o seu trabalho académico com sucesso
-            Aproveite o infinito mundo da pesquisa e ajuda académica com mais de 30.000 livros e 
-            trabalhos já feitos e divulgados pelas instituições..
-              <br/>
-            </p>
-            
+            </div>
+          </nav>
+          <!-- End Navbar -->
         </div>
-        
       </div>
     </div>
-    
-  </div>
-  
-</header>
 
-<div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
+    <!-- include-->
+    {% block corpo %} {% endblock %}
 
-<section class="pt-3 pb-4" id="count-stats">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-9 mx-auto py-3">
+    <footer class="footer pt-4 mt-5">
+      <div class="container">
         <div class="row">
-          <div class="col-md-4 position-relative">
-            <div class="p-3 text-center">
-              <h1 class="text-gradient text-primary"><span id="state1" countTo="70">0</span>+</h1>
-              <h5 class="mt-3">Universidades Públicas</h5>
-              <p class="text-sm font-weight-normal"></p>
-            </div>
-            <hr class="vertical dark">
-          </div>
-          <div class="col-md-4 position-relative">
-            <div class="p-3 text-center">
-              <h1 class="text-gradient text-primary"> <span id="state2" countTo="15">0</span>+</h1>
-              <h5 class="mt-3">Universidades Privadas</h5>
-              <p class="text-sm font-weight-normal"> </p>
-            </div>
-            <hr class="vertical dark">
-          </div>
-          <div class="col-md-4">
-            <div class="p-3 text-center">
-              <h1 class="text-gradient text-primary" id="state3" countTo="20">0</h1>
-              <h5 class="mt-3"> Pessoas Independentes</h5>
-              <p class="text-sm font-weight-normal"></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="my-5 py-3">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-4 ms-auto me-auto p-lg-4 mt-lg-0 mt-4">
-        <div class="rotating-card-container">
-          <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
-            <div class="front front-background" style="background-image: url(https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80); background-size: cover;">
-              <div class="card-body py-6 text-center">
-                <!--<i class="material-icons text-white text-4xl my-3">touch_app</i>-->
-                <h3 class="text-white">REPOSITÓRIO<br />  </h3>
-                <p class="text-white opacity-8">
-                  mais de 30.000 livros e trabalhos já feitos e divulgados pelas instituições reconhecidas pelo Ministério do Ensino Superior e Tecnologia de Inovação.
-Temos para si uma vasta lista de temas de Tese de Licenciatura, Doutoramento, Dissertação, Monografias, Relatórios, e outro…
-                </p>
-
-                   <p>
-                      <a href="#" target="_blank" class="btn btn-white btn-sm ">Regista-se</a>
-                   </p>
-              </div>
-            </div>
-            <div class="back back-background" style="background-image: url(https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80); background-size: cover;">
-              <div class="card-body pt-7 text-center">
-                <h3 class="text-white">Divulga</h3>
-                <p class="text-white opacity-8">À medida que governos e financiadores de pesquisas veem os benefícios do conteúdo aberto, a criação de recomendações, mandatos e
-                      aplicação de mandatos estão vindo em grande escala e rápido</p>
-                <a href="#" target="_blank" class="btn btn-white btn-sm w-50 mx-auto mt-3">Regista-se</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 ms-auto">
-        <div class="row justify-content-start">
-          <div class="col-md-6">
-            <div class="info">
-              <!--<i class="material-icons text-gradient text-primary text-3xl">content_copy</i>-->
-              <h5 class="font-weight-bolder mt-3">Divulgação</h5>
-              <p class="pe-5">As bibliotecas precisam saber quais livros licenciados abertamente são publicados por editoras acadêmicas de renome. </p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="info">
-              <!--<i class="material-icons text-gradient text-primary text-3xl">flip_to_front</i>-->
-              <h5 class="font-weight-bolder mt-3">Descoberta</h5>
-              <p class="pe-3">The world’s most popular front-end open source toolkit, featuring Sass variables and mixins.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-start mt-5">
-          <div class="col-md-6 mt-3">
-            <!--<i class="material-icons text-gradient text-primary text-3xl">price_change</i>-->
-            <h5 class="font-weight-bolder mt-3">Depósito</h5>
-            <p class="pe-5">Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System.</p>
-          </div>
-          <div class="col-md-6 mt-3">
-            <div class="info">
-              <!--<i class="material-icons text-gradient text-primary text-3xl">devices</i>-->
-              <h5 class="font-weight-bolder mt-3">Serviço</h5>
-              <p class="pe-3">O Serviço de Depósito BANTUS apóia políticas de acesso aberto de financiadores e profissionais de pesquisa</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="py-2">
-  <div class="container">
-    <div class="row">
-      <div class="row text-center my-sm-5 mt-5">
-        <div class="col-lg-6 mx-auto">
-          <!--<span class="badge bg-primary mb-3">Boost creativity</span>-->
-          <h2 class="">CATEGORIAS EM DESTAQUE </h2>
-          <!--<p class="lead">The easiest way to get started is to use one of our <br /> pre-built example pages. </p>-->
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container mt-2">
-    <div class="row">
-      <div class="col-md-8">
-        <div class="row mt-4">
-          <div class="col-md-4 mt-md-0 mt-5 move-on-hover">
-            <a href="#">
-                <img class="avatar avatar-xxl shadow-xl position-relative z-index-2" src="{% static '/assets/img/parceiros/uan.jpg' %}" alt="aboutus">
-              <div class="mt-2 ms-2">
-                <h6 class="mb-0">
-              Ciências Agrárias e Veterinárias</h6>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4 mt-md-0 mt-5 move-on-hover">
-            <a href="#">
-                <img class="avatar avatar-xxl shadow-xl position-relative z-index-2" src="{% static '/assets/img/parceiros/uan.jpg' %}" alt="aboutus">
-              <div class="mt-2 ms-2">
-                <h6 class="mb-0">Ciências Biológicas e Saúde</h6>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4 mt-md-0 mt-5 move-on-hover">
-            <a href="#">
-                 <img class="avatar avatar-xxl shadow-xl position-relative z-index-2" src="{% static '/assets/img/parceiros/uan.jpg' %}" alt="aboutus">
-              <div class="mt-2 ms-2">
-                <h6 class="mb-0">
-                Astronomia, Astrofísica, Ciência Espacial</h6>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4 mt-md-3 mt-6 move-on-hover">
-            <a href="#">
-                <img class="avatar avatar-xxl shadow-xl position-relative z-index-2" src="{% static '/assets/img/parceiros/uan.jpg' %}" alt="aboutus">
-              <div class="mt-2 ms-2">
-                <h6 class="mb-0">Engenharia e Tecnologia</h6>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4 mt-md-3 mt-6 move-on-hover">
-            <a href="#">
-              
-               <img class="avatar avatar-xxl shadow-xl position-relative z-index-2" src="{% static '/assets/img/parceiros/uan.jpg' %}" alt="aboutus">
-            
-              <div class="mt-2 ms-2">
-                <h6 class="mb-0">Comércio, Gestão, Turismo e Serviços</h6>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-4 mt-md-3 mt-6 move-on-hover">
-            <a href="#">
-              
-                <img class="avatar avatar-xxl shadow-xl position-relative z-index-2" src="{% static '/assets/img/parceiros/uan.jpg' %}" alt="aboutus">
-             
-              <div class="mt-2 ms-2">
-                <h6 class="mb-0">
-              Língua, Comunicação e Cultura</h6>
-              </div>
-            </a>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="col-md-3 mx-auto mt-md-0 mt-5">
-        <div class="position-sticky" style="top:280px !important">
-          <h4 class="">A sabedoria divina é a arma mais poderosa que transforma as ideia em conhecimento concreto</h4>
-          <h6 class="text-secondary font-weight-normal"></h6>
-        </div>
-      </div>
-    </div>
-</section>
-
-
-<!-- -------- START Content Presentation Docs ------- -->
-<div class="container mt-sm-5">
-  <div class="page-header py-6 py-md-5 my-sm-3 mb-3 border-radius-xl" style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/desktop.jpg');" loading="lazy">
-    <span class="mask bg-gradient-dark"></span>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 ms-lg-5">
-          <h4 class="text-white"></h4>
-          <h1 class="text-white">Os melhores artigos e obras cientificas do mes....</h1>
-          <p class="lead text-white opacity-8">O mundo sabe que angola é uma potencia adormecida... </p>
-          <a href="#" class="text-white icon-move-right">
-            Saiba Mais
-            <i class="fas fa-arrow-right text-sm ms-1"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--
-<div class="container">
-  <div class="row">
-    <div class="col-lg-4">
-      <div class="info-horizontal bg-gradient-primary border-radius-xl d-block d-md-flex p-4">
-        <i class="material-icons text-white text-3xl">flag</i>
-        <div class="ps-0 ps-md-3 mt-3 mt-md-0">
-          <h5 class="text-white">Getting Started</h5>
-          <p class="text-white">Check the possible ways of working with our product and the necessary files for building your own project.</p>
-          <a href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-kit" class="text-white icon-move-right">
-            Let's start
-            <i class="fas fa-arrow-right text-sm ms-1"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 px-lg-1 mt-lg-0 mt-4">
-      <div class="info-horizontal bg-gray-100 border-radius-xl d-block d-md-flex p-4 h-100">
-        <i class="material-icons text-gradient text-primary text-3xl">precision_manufacturing</i>
-        <div class="ps-0 ps-md-3 mt-3 mt-md-0">
-          <h5>Plugins</h5>
-          <p>Get inspiration and have an overview about the plugins that we used to create the Material Kit.</p>
-          <a href="https://www.creative-tim.com/learning-lab/bootstrap/datepicker/material-kit" class="text-primary icon-move-right">
-            Read more
-            <i class="fas fa-arrow-right text-sm ms-1"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 mt-lg-0 mt-4">
-      <div class="info-horizontal bg-gray-100 border-radius-xl d-block d-md-flex p-4">
-        <i class="material-icons text-gradient text-primary text-3xl">receipt_long</i>
-        <div class="ps-0 ps-md-3 mt-3 mt-md-0">
-          <h5>Utility Classes</h5>
-          <p>Material Kit is giving you a lot of pre-made elements. For those who want flexibility, we included many utility classes.</p>
-          <a href="https://www.creative-tim.com/learning-lab/bootstrap/utilities/material-kit" class="text-primary icon-move-right">
-            Read more
-            <i class="fas fa-arrow-right text-sm ms-1"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
--->
-<!-- -------- END Content Presentation Docs ------- -->
-
-
-<section class="py-7">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 mx-auto text-center">
-        <!--<h2 class="mb-0"> Opinões e Sugestão</h2>-->
-        <h2 class="text-gradient text-primary mb-3">Opinões e Sugestão</h2>
-        <p class="lead">Seja um membro que ajuda a comunidade científica angolana a crescer </p>
-      </div>
-    </div>
-    <div class="row mt-6">
-      <div class="col-lg-4 col-md-8">
-        <div class="card card-plain">
-          <div class="card-body">
-            <div class="author">
-              <div class="name">
-                <h6 class="mb-0 font-weight-bolder">Sofia Filipe</h6>
-                <div class="stats">
-                  <i class="far fa-clock"></i> 1 day ago
-                </div>
-              </div>
-            </div>
-            <p class="mt-4">" Tenho feita varias pesquisas, a platforma veio ajudar muito a comunidade académica "</p>
-            <div class="rating mt-3">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-8 ms-md-auto">
-        <div class="card bg-gradient-primary">
-          <div class="card-body">
-            <div class="author align-items-center">
-              <div class="name">
-                <h6 class="text-white mb-0 font-weight-bolder">João Daniel</h6>
-                <div class="stats text-white">
-                  <i class="far fa-clock"></i> 1 week ago
-                </div>
-              </div>
-            </div>
-            <p class="mt-4 text-white">"Tem tornado o processo da partilha de informação e artigos e documentos em grande escala !!!"</p>
-            <div class="rating mt-3">
-              <i class="fas fa-star text-white"></i>
-              <i class="fas fa-star text-white"></i>
-              <i class="fas fa-star text-white"></i>
-              <i class="fas fa-star text-white"></i>
-              <i class="fas fa-star text-white"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-8">
-        <div class="card card-plain">
-          <div class="card-body">
-            <div class="author">
-              <div class="name">
-                <h6 class="mb-0 font-weight-bolder">Samuel Kamuli</h6>
-                <div class="stats">
-                  <i class="far fa-clock"></i> 3 weeks ago
-                </div>
-              </div>
-            </div>
-            <p class="mt-4">"Great product. Helped me cut the time to set up a site. I used the components within instead of starting from scratch. I highly recommend for developers who want to spend more time on the backend!."</p>
-            <div class="rating mt-3">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <hr class="horizontal dark my-2">
-   <!-- <div class="row">
-      <div class="col-lg-2 col-md-4 col-6 ms-auto">
-        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-apple.svg" alt="Logo">
-      </div>
-      <div class="col-lg-2 col-md-4 col-6">
-        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-facebook.svg" alt="Logo">
-      </div>
-      <div class="col-lg-2 col-md-4 col-6">
-        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-nasa.svg" alt="Logo">
-      </div>
-      <div class="col-lg-2 col-md-4 col-6 ms-lg-0 ms-md-auto">
-        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-vodafone.svg" alt="Logo">
-      </div>
-      <div class="col-lg-2 col-md-4 col-6 me-md-auto mx-md-0 mx-auto">
-        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-digitalocean.svg" alt="Logo">
-      </div>
-    </div>-->
-  </div>
-</section>
-
-
-<section class="py-sm-7" id="download-soft-ui">
-  <div class="bg-gradient-dark position-relative m-3 border-radius-xl overflow-hidden">
-    <img src="./assets/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute start-0 top-md-0 w-100 opacity-2">
-    <div class="container py-7 postion-relative z-index-2 position-relative">
-      <div class="row">
-        <div class="col-md-7 mx-auto text-center">
-          <h3 class="text-white mb-0">Do you love this awesome</h3>
-          <h3 class="text-white">UI Kit for Bootstrap 5?</h3>
-          <p class="text-white mb-5">Cause if you do, it can be yours for FREE. Hit the button below to navigate to Creative Tim where you can find the Design System in HTML. Start a new project or give an old Bootstrap project a new look!</p>
-          <a href="#" class="btn btn-primary btn-lg mb-3 mb-sm-0">Download HTML</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-6 mx-auto">
-        <div class="text-center">
-          <h3 class="mt-5 mb-4">Os Nossos Parceiros</h3>
-          <div class="row justify-content-center">
-            <div class="col-lg-2 col-4">
-              <a href="#" target="_blank">
-                <img src="{% static '/assets/img/parceiros/uan.jpg' %}" class="img-fluid" data-bs-toggle="tooltip" data-bs-placement="bottom" title="UAN">
+          <div class="col-md-3 mb-4 ms-auto">
+            <div>
+              <a href="#">
+                <img src="{% static '/assets/img/logo-ct-dark.png' %}" class="mb-3 footer-logo" alt="main_logo" />
               </a>
+              <h6 class="font-weight-bolder mb-4">BANTUS</h6>
             </div>
-            <div class="col-lg-2 col-4">
-              <a href="javascript:;">
-                <img src="{% static '/assets/img/parceiros/estado.jpeg' %}" class="img-fluid opacity-6" data-bs-toggle="tooltip" data-bs-placement="bottom" title="ANGOLA">
-              </a>
+            <div>
+              <ul class="d-flex flex-row ms-n3 nav">
+                <li class="nav-item">
+                  <a class="nav-link pe-1" href="#" target="_blank">
+                    <i class="fab fa-facebook text-lg opacity-8"></i>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link pe-1" href="#" target="_blank">
+                    <i class="fab fa-twitter text-lg opacity-8"></i>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link pe-1" href="#" target="_blank">
+                    <i class="fab fa-github text-lg opacity-8"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
-            <div class="col-lg-2 col-4">
-              <a href="javascript:;">
-                <img src="{% static '/assets/img/parceiros/g1.jpeg' %}" class="img-fluid opacity-6" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Gregorio">
-              </a>
-            </div>
-            <div class="col-lg-2 col-4">
-              <a href="javascript:;">
-                <img src="{% static '/assets/img/parceiros/idp.jpeg' %}" class="img-fluid opacity-6" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Independente">
-              </a>
-            </div>
-            <div class="col-lg-2 col-4">
-              <a href="javascript:;">
-                <img src="{% static '/assets/img/parceiros/isia.png' %}" class="img-fluid opacity-6" data-bs-toggle="tooltip" data-bs-placement="bottom" title="ISIA">
-              </a>
-            </div>
-            
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!--
-<section class="my-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7 col-12 my-auto">
-        <h3 class="text-gradient text-primary mb-0">You liked it and</h3>
-        <h3>Want more?</h3>
-        <p class="pe-md-5 mb-4">
-          Most complex and innovative Design System Made by <a href="#" target="_blank">Creative Tim </a> . Check our latest Premium Bootstrap 5 UI Kit.
+          <div class="col-md-2 col-sm-6 col-6 mb-4">
+            <div>
+              <h6 class="text-sm"></h6>
+              <ul class="flex-column ms-n3 nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#" target="_blank"> Serviços </a>
+                </li>
 
-          Designed for those who like bold elements and beautiful websites. Made of hundred of elements, designed blocks and fully coded pages, Material Kit is ready to help you create stunning websites and webapps.
-        </p>
-        <div class="github-buttons">
-          <a href="https://www.creative-tim.com/product/material-kit-pro?ref=index-mk2" target="_blank" class="btn bg-gradient-primary mb-5 mb-sm-0">Upgrade to Pro</a>
-          <div class="github-button">
-            <span></span>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" target="_blank"> Nossos projetos </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#" target="_blank"> Catalogo de universidade </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-md-5 col-12 my-auto">
-        <a href="https://www.creative-tim.com/product/material-kit-pro?ref=index-mk2">
-          <img class="w-100 border-radius-lg shadow-lg" src="https://s3.amazonaws.com/creativetim_bucket/products/46/original/material-kit-pro.jpg?1632843641" alt="Product Image">
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
--->
 
-<!--
-<div class="py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 ms-auto">
-        <h4 class="mb-1">Thank you for your support!</h4>
-        <p class="lead mb-0">We deliver the best web products</p>
-      </div>
-      <div class="col-lg-5 me-lg-auto my-lg-auto text-lg-end mt-5">
-        <a href="https://twitter.com/intent/tweet?text=Check%20Material%20UI%20Kit%20made%20by%20%40CreativeTim%20%23webdesign%20%23designsystem%20%23bootstrap5&url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fmaterial-kit" class="btn btn-twitter mb-0 me-2" target="_blank">
-          <i class="fab fa-twitter me-1"></i> Tweet
-        </a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-kit" class="btn btn-facebook mb-0 me-2" target="_blank">
-          <i class="fab fa-facebook-square me-1"></i> Share
-        </a>
-        <a href="https://www.pinterest.com/pin/create/button/?url=https://www.creative-tim.com/product/material-kit" class="btn btn-pinterest mb-0 me-2" target="_blank">
-          <i class="fab fa-pinterest me-1"></i> Pin it
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
- -->
-
-</div>
-
-
-  <footer class="footer pt-4 mt-5">
-  <div class="container">
-    <div class=" row">
-      <div class="col-md-3 mb-4 ms-auto">
-        <div>
-          <a href="#">
-            <img src="{% static '/assets/img/logo-ct-dark.png' %}" class="mb-3 footer-logo" alt="main_logo">
-          </a>
-          <h6 class="font-weight-bolder mb-4">BANTUS</h6>
-        </div>
-        <div>
-          <ul class="d-flex flex-row ms-n3 nav">
-            <li class="nav-item">
-              <a class="nav-link pe-1" href="#" target="_blank">
-                <i class="fab fa-facebook text-lg opacity-8"></i>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link pe-1" href="#" target="_blank">
-                <i class="fab fa-twitter text-lg opacity-8"></i>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link pe-1" href="#" target="_blank">
-                <i class="fab fa-github text-lg opacity-8"></i>
-              </a>
-            </li>
-
-            
-          </ul>
-        </div>
-      </div>
-
-
-
-      <div class="col-md-2 col-sm-6 col-6 mb-4">
-        <div>
-          <h6 class="text-sm">Company</h6>
-          <ul class="flex-column ms-n3 nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
-                About Us
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
-                Freebies
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
-         
-              </a>
-            </li>
-
-          </ul>
-        </div>
-      </div>
-
-     
-      <div class="col-md-2 col-sm-6 col-6 mb-4">
-         <!--
+          <div class="col-md-2 col-sm-6 col-6 mb-4">
+            <!--
         <div>
           <h6 class="text-sm">Resources</h6>
           <ul class="flex-column ms-n3 nav">
@@ -750,10 +224,10 @@ Temos para si uma vasta lista de temas de Tese de Licenciatura, Doutoramento, Di
           </ul>
         </div>
         -->
-      </div>
+          </div>
 
-      <div class="col-md-2 col-sm-6 col-6 mb-4">
-         <!--
+          <div class="col-md-2 col-sm-6 col-6 mb-4">
+            <!--
         <div>
           <h6 class="text-sm">Help & Support</h6>
           <ul class="flex-column ms-n3 nav">
@@ -784,11 +258,10 @@ Temos para si uma vasta lista de temas de Tese de Licenciatura, Doutoramento, Di
           </ul>
         </div>
            -->
-      </div>
-    
+          </div>
 
-      <div class="col-md-2 col-sm-6 col-6 mb-4 me-auto">
-           <!--
+          <div class="col-md-2 col-sm-6 col-6 mb-4 me-auto">
+            <!--
         <div>
           <h6 class="text-sm">Legal</h6>
           <ul class="flex-column ms-n3 nav">
@@ -812,76 +285,72 @@ Temos para si uma vasta lista de temas de Tese de Licenciatura, Doutoramento, Di
           </ul>
         </div>
         -->
-      </div>
-     
+          </div>
 
-      <div class="col-12">
-        <div class="text-center">
-          <p class="text-dark my-4 text-sm font-weight-normal">
-          Repositório Académico Ciéntifico Angolano. Copyright © <script>document.write(new Date().getFullYear())</script>  <a href="#" target="_blank">Creative SOFIL WEB</a>.
-          </p>
+          <div class="col-12">
+            <div class="text-center">
+              <p class="text-dark my-4 text-sm font-weight-normal">
+                Repositório Académico Ciéntifico Angolano. Copyright ©
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                <a href="#" target="_blank">Creative SOFIL WEB</a>.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 
+    <!--   Core JS Files   -->
+    <script src="{% static '/assets/js/core/popper.min.js' %}" type="text/javascript"></script>
+    <script src="{% static '/assets/js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+    <script src="{% static '/assets/js/plugins/perfect-scrollbar.min.js' %}"></script>
 
-<!--   Core JS Files   -->
-<script src="{% static '/assets/js/core/popper.min.js' %}" type="text/javascript"></script>
-<script src="{% static '/assets/js/core/bootstrap.min.js' %}" type="text/javascript"></script>
-<script src="{% static '/assets/js/plugins/perfect-scrollbar.min.js' %}"></script>
+    <script src="{% static '/assets/js/plugins/countup.min.js' %}"></script>
+    <script src="{% static '/assets/js/plugins/choices.min.js' %}"></script>
 
-<script src="{% static '/assets/js/plugins/countup.min.js' %}"></script>
-<script src="{% static '/assets/js/plugins/choices.min.js' %}"></script>
+    <script src="{% static '/assets/js/plugins/prism.min.js' %}"></script>
+    <script src="{% static '/assets/js/plugins/highlight.min.js' %}"></script>
 
-<script src="{% static '/assets/js/plugins/prism.min.js' %}"></script>
-<script src="{% static '/assets/js/plugins/highlight.min.js' %}"></script>
+    <!--  Plugin for Parallax, full documentation here: https://github.com/dixonandmoe/rellax -->
+    <script src="{% static '/assets/js/plugins/rellax.min.js' %}"></script>
+    <script src="{% static '/assets/js/plugins/tilt.min.js' %}"></script>
+    <script src="{% static '/assets/js/plugins/choices.min.js' %}"></script>
 
+    <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+    <script src="{% static '/assets/js/plugins/parallax.min.js' %}"></script>
 
-<!--  Plugin for Parallax, full documentation here: https://github.com/dixonandmoe/rellax -->
-<script src="{% static '/assets/js/plugins/rellax.min.js' %}"></script>
-<script src="{% static '/assets/js/plugins/tilt.min.js' %}"></script>
-<script src="{% static '/assets/js/plugins/choices.min.js' %}"></script>
+    <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
+    <!--  Google Maps Plugin    -->
 
+    <script src="{% static '/assets/js/material-kit.min.js' %}" type="text/javascript"></script>
 
-<!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
-<script src="{% static '/assets/js/plugins/parallax.min.js' %}"></script>
-
-<!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
-<!--  Google Maps Plugin    -->
-
-<script src="{% static '/assets/js/material-kit.min.js' %}" type="text/javascript"></script>
-
-
-<script type="text/javascript">
-
-  if (document.getElementById('state1')) {
-    const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
-    if (!countUp.error) {
-      countUp.start();
-    } else {
-      console.error(countUp.error);
-    }
-  }
-  if (document.getElementById('state2')) {
-    const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
-    if (!countUp1.error) {
-      countUp1.start();
-    } else {
-      console.error(countUp1.error);
-    }
-  }
-  if (document.getElementById('state3')) {
-    const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
-    if (!countUp2.error) {
-      countUp2.start();
-    } else {
-      console.error(countUp2.error);
-    };
-  }
-</script>
-
-</body>
-
+    <script type="text/javascript">
+      if (document.getElementById("state1")) {
+        const countUp = new CountUp("state1", document.getElementById("state1").getAttribute("countTo"));
+        if (!countUp.error) {
+          countUp.start();
+        } else {
+          console.error(countUp.error);
+        }
+      }
+      if (document.getElementById("state2")) {
+        const countUp1 = new CountUp("state2", document.getElementById("state2").getAttribute("countTo"));
+        if (!countUp1.error) {
+          countUp1.start();
+        } else {
+          console.error(countUp1.error);
+        }
+      }
+      if (document.getElementById("state3")) {
+        const countUp2 = new CountUp("state3", document.getElementById("state3").getAttribute("countTo"));
+        if (!countUp2.error) {
+          countUp2.start();
+        } else {
+          console.error(countUp2.error);
+        }
+      }
+    </script>
+  </body>
 </html>
