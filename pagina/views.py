@@ -17,4 +17,4 @@ def registar(request):
 
 def loginUser(request):
     context = {}
-    return render(request, 'pagina/registar.html', context)
+    return render(request, 'pagina/sign.html', context)
