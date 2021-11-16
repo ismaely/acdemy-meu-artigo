@@ -18,3 +18,14 @@ def registar(request):
 def loginUser(request):
     context = {}
     return render(request, 'pagina/sign.html', context)
+
+
+
+def service(request):
+    context = {}
+    return render(request, 'pagina/service.html', context)
+
+
+def parceiros(request):
+    context = {}
+    return render(request, 'pagina/sign.html', context)
