@@ -1,33 +1,108 @@
  
  {% extends 'base.html' %}{% block corpo %}{% load static %}
- <header class="header-2">
-      <div class="page-header min-vh-75 relative" style="background-image: url('../static/assets/img/bg10.jpg')">
-        <span class="mask bg-gradient-dark opacity-4"></span>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-7 text-center mx-auto">
-              <h3 class="text-white pt-7 mt-n5">REPOSITÓRIO INTEGRADO CIÉNTIFICO & ACADÉMICO DE ANGOLA</h3>
-              <p class="lead text-white mt-1">
-                <br />
-                Ajudamos você a terminar o seu trabalho académico com sucesso Aproveite o infinito mundo da pesquisa e ajuda académica com mais de 30.000 livros e trabalhos já
-                feitos e divulgados pelas instituições..
-                <br />
-              </p>
-            </div>
-          </div>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-absolute bg-transparent shadow-none">
+    <div class="container">
+      <a class="navbar-brand text-white" href="javascript:;">Material Design</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header-2" aria-controls="navbar-header-2" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-header-2">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:;">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:;">
+              About Us
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:;">
+              Contact Us
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/CreativeTim">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="https://www.facebook.com/CreativeTim">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.instagram.com/CreativeTimOfficial">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="page-header min-vh-75" style="background-image: url(https://images.unsplash.com/photo-1501446529957-6226bd447c46?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2378&q=80)" loading="lazy">
+    <span class="mask bg-gradient-dark opacity-4"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-white text-center">
+          <h2 class="text-white">Book your next trip</h2>
+          <p class="lead">An arrangement you make to have a hotel room, tickets, etc. at a particular time in the future</p>
         </div>
       </div>
-    </header>
-<div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
+    </div>
+  </div>
+  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 mb-n3">
+    <div class="container">
+      <div class="row border-radius-md pb-4 p-3 mx-sm-0 mx-1 position-relative">
+        <div class="col-lg-3 mt-lg-n2 mt-2">
+          <label class="ms-0">Buscar documentos</label>
+          <select class="form-control" name="choices-leave" id="choices-leave">
+            <option value="Choice 1" selected="">Brazil</option>
+            <option value="Choice 2">Bucharest</option>
+            <option value="Choice 3">London</option>
+            <option value="Choice 4">USA</option>
+          </select>
+        </div>
+        <div class="col-lg-3 mt-lg-n2 mt-2">
+          <label class="ms-0">Categoria</label>
+          <select class="form-control" name="choices-to" id="choices-to">
+            <option value="Choice 1" selected="">Italy</option>
+            <option value="Choice 2">Spain</option>
+            <option value="Choice 3">Denmark</option>
+            <option value="Choice 4">Poland</option>
+          </select>
+        </div>
+        <div class="col-lg-3 mt-lg-n2 mt-2">
+          <label class="ms-0">Depart</label>
+          <div class="input-group input-group-static">
+            <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+            <input class="form-control datepicker" placeholder="Please select date" type="text" >
+          </div>
+        </div>
+        <div class="col-lg-3 mt-lg-n2 mt-2">
+          <label>&nbsp;</label>
+          <button type="button" class="btn bg-gradient-info w-100 mb-0">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n0">
 
-<section class="pt-3 pb-4" id="count-stats">
+<section class="pt-1 pb-4" id="count-stats">
   <div class="container">
     <div class="row">
       <div class="col-lg-9 mx-auto py-3">
         <div class="row">
           <div class="col-md-4 position-relative">
             <div class="p-3 text-center">
-              <h1 class="text-gradient text-primary"><span id="state1" countTo="70">0</span>+</h1>
+              <h1 class="text-gradient text-info"><span id="state1" countTo="70">0</span>+</h1>
               <h5 class="mt-3">Universidades Públicas</h5>
               <p class="text-sm font-weight-normal"></p>
             </div>
@@ -35,7 +110,7 @@
           </div>
           <div class="col-md-4 position-relative">
             <div class="p-3 text-center">
-              <h1 class="text-gradient text-primary"> <span id="state2" countTo="15">0</span>+</h1>
+              <h1 class="text-gradient text-info"> <span id="state2" countTo="15">0</span>+</h1>
               <h5 class="mt-3">Universidades Privadas</h5>
               <p class="text-sm font-weight-normal"> </p>
             </div>
@@ -43,7 +118,7 @@
           </div>
           <div class="col-md-4">
             <div class="p-3 text-center">
-              <h1 class="text-gradient text-primary" id="state3" countTo="20">0</h1>
+              <h1 class="text-gradient text-info" id="state3" countTo="20">0</h1>
               <h5 class="mt-3"> Pessoas Independentes</h5>
               <p class="text-sm font-weight-normal"></p>
             </div>
@@ -67,7 +142,7 @@
                 <h3 class="text-white">REPOSITÓRIO<br />  </h3>
                 <p class="text-white opacity-8">
                   mais de 30.000 livros e trabalhos já feitos e divulgados pelas instituições reconhecidas pelo Ministério do Ensino Superior e Tecnologia de Inovação.
-Temos para si uma vasta lista de temas de Tese de Licenciatura, Doutoramento, Dissertação, Monografias, Relatórios, e outro…
+                    Temos para si uma vasta lista de temas de Tese de Licenciatura, Doutoramento, Dissertação, Monografias, Relatórios, e outro…
                 </p>
 
                    <p>
@@ -281,14 +356,14 @@ Temos para si uma vasta lista de temas de Tese de Licenciatura, Doutoramento, Di
 -->
 <!-- -------- END Content Presentation Docs ------- -->
 
-
+<!--
 <section class="py-7">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 mx-auto text-center">
-        <!--<h2 class="mb-0"> Opinões e Sugestão</h2>-->
+        
         <h2 class="text-gradient text-primary mb-3">Opinões e Sugestão</h2>
-        <p class="lead">Seja um membro que ajuda a comunidade científica angolana a crescer </p>
+        <p class="lead">Seja um membro que ajuda a comunidade ciéntifica angolana a crescer... </p>
       </div>
     </div>
     <div class="row mt-6">
@@ -363,25 +438,9 @@ Temos para si uma vasta lista de temas de Tese de Licenciatura, Doutoramento, Di
 
     </div>
     <hr class="horizontal dark my-2">
-   <!-- <div class="row">
-      <div class="col-lg-2 col-md-4 col-6 ms-auto">
-        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-apple.svg" alt="Logo">
-      </div>
-      <div class="col-lg-2 col-md-4 col-6">
-        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-facebook.svg" alt="Logo">
-      </div>
-      <div class="col-lg-2 col-md-4 col-6">
-        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-nasa.svg" alt="Logo">
-      </div>
-      <div class="col-lg-2 col-md-4 col-6 ms-lg-0 ms-md-auto">
-        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-vodafone.svg" alt="Logo">
-      </div>
-      <div class="col-lg-2 col-md-4 col-6 me-md-auto mx-md-0 mx-auto">
-        <img class="w-100 opacity-6" src="./assets/img/logos/gray-logos/logo-digitalocean.svg" alt="Logo">
-      </div>
-    </div>-->
+  
   </div>
-</section>
+</section> -->
 
 
 <section class="py-sm-7" id="download-soft-ui">
