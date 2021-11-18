@@ -16,9 +16,11 @@
       </div>
     </div>
   </div>
-  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 mb-n3">
+  <div class="card card-body  shadow-blur mx-3 mx-md-4 mt-n6 mb-n3">
     <div class="container">
+        <form class="" method="post" action="#">
       <div class="row border-radius-md pb-4 p-3 mx-sm-0 mx-1 position-relative">
+      {% csrf_token %} {% autoescape on %}
         <div class="col-lg-3 mt-lg-n2 mt-2">
           <div class="input-group input-group-static mb-4 ">
           <label class="font-weight-bolder"><h5>Titulo</h5> </label>
@@ -34,14 +36,21 @@
             <option value="Choice 4">cultura</option>
           </select>
         </div>
-        <div class="col-lg-1 mt-lg-n2 mt-2">
-          
+        <div class="col-lg-2 mt-lg-n2 mt-2">
+          <label class="ms-0 font-weight-bolder"> <h5>Tipo</h5>  </label>
+          <select class="form-control" name="choices-to" id="choices-to">
+            <option value="Choice 1" selected="">Monografia</option>
+            <option value="Choice 2">Dissertação</option>
+            
+          </select>
         </div>
         <div class="col-lg-3 mt-lg-n2 mt-2">
           <label>&nbsp;</label>
-          <button type="button" class="btn bg-gradient-info w-100 mb-0">Search</button>
+          <button type="button" class="btn bg-gradient-info w-100 mb-0">Pesquisar</button>
         </div>
+        {% endautoescape %}
       </div>
+      </form>
     </div>
   </div>
 
@@ -55,7 +64,7 @@
         <div class="row">
           <div class="col-md-4 position-relative">
             <div class="p-3 text-center">
-              <h1 class="text-gradient text-info"><span id="state1" countTo="70">0</span>+</h1>
+              <h1 class="text-gradient text-info"><span id="state1" countTo="20">0</span>+</h1>
               <h5 class="mt-3">Universidades Públicas</h5>
               <p class="text-sm font-weight-normal"></p>
             </div>
@@ -114,38 +123,63 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-6 ms-auto">
+
+      <div class="col-lg-4 ms-auto">
         <div class="row justify-content-start">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="info">
               <!--<i class="material-icons text-gradient text-primary text-3xl">content_copy</i>-->
               <h5 class="font-weight-bolder mt-3">Divulgação</h5>
               <p class="pe-5">As bibliotecas precisam saber quais livros licenciados abertamente são publicados por editoras acadêmicas de renome. </p>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="info">
               <!--<i class="material-icons text-gradient text-primary text-3xl">flip_to_front</i>-->
-              <h5 class="font-weight-bolder mt-3">Descoberta</h5>
-              <p class="pe-3">The world’s most popular front-end open source toolkit, featuring Sass variables and mixins.</p>
+              <h5 class="font-weight-bolder mt-3">Depósito</h5>
+            <p class="pe-5">O serviço Depósito de Documento Particular Autenticado permite proceder ao depósito electrónico de documento particular autenticado e de consentimento do credor </p>
             </div>
           </div>
         </div>
-        <div class="row justify-content-start mt-5">
-          <div class="col-md-6 mt-3">
-            <!--<i class="material-icons text-gradient text-primary text-3xl">price_change</i>-->
-            <h5 class="font-weight-bolder mt-3">Depósito</h5>
-            <p class="pe-5">Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System.</p>
-          </div>
-          <div class="col-md-6 mt-3">
-            <div class="info">
-              <!--<i class="material-icons text-gradient text-primary text-3xl">devices</i>-->
-              <h5 class="font-weight-bolder mt-3">Serviço</h5>
-              <p class="pe-3">O Serviço de Depósito BANTUS apóia políticas de acesso aberto de financiadores e profissionais de pesquisa</p>
-            </div>
-          </div>
-        </div>
+       
       </div>
+
+      <div class="col-lg-4 ms-auto">
+         <h5 class="font-weight-bolder">Lista de Divulgação Recente</h5>
+        <div class="row justify-content-start">
+          <div class="col-md-12">
+            <div class="info">
+              <p></p>
+            </div>
+          </div>
+           <div class="col-md-12">
+            <div class="info">
+               <a href="">
+              <h6 class="font-weight-bolder">1-Segurança Informatica</h6>
+              <p class="">livros licenciados abertamente são publicados por editoras acadêmicas de renome. </p>
+            </a>
+            </div>
+             <div class="info">
+                <a href="">
+              <h6 class="font-weight-bolder">2-Saúde nas Crianças</h6>
+              <p class="">Para avaliar o crescimento, o médico observa o ganho de peso e a estatura e correlaciona. </p>
+           </a>
+            </div>
+             <div class="info">
+               <a href="">
+
+               
+              <h6 class="font-weight-bolder">3- Desporto nas Escolas</h6>
+              <p class="">Ministério da Educação e Ciência toda atividades desportivas desenvolvidas como complemento. </p>
+            </a>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+
+
     </div>
   </div>
 </section>
@@ -168,64 +202,85 @@
     <div class="row">
       <div class="col-md-12">
         <div class="row mt-4">
-          <div class="col-md-4 mt-md-0 mt-5 move-on-hover">
-            <a href="#">
-                <img class="w-100" src="{% static '/assets/img/categoria/c11.jpeg' %}" alt="aboutus">
-              <div class="mt-2 ms-2">
-                <h6 class="mb-0">
-              Ciências Agrárias e Veterinárias
-            </h6>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4 mt-md-0 mt-5 move-on-hover">
-            <a href="#">
-                <img class="w-100" src="{% static '/assets/img/categoria/c22.jpg' %}" alt="aboutus">
-              <div class="mt-2 ms-2">
-                <h6 class="mb-0">Ciências Biológicas e Saúde</h6>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4 mt-md-0 mt-5 move-on-hover">
-            <a href="#">
-                 <img class="w-100" src="{% static '/assets/img/categoria/c55.jpg' %}" alt="aboutus">
-              <div class="mt-2 ms-2">
-                <h6 class="mb-0">
-                Astronomia, Astrofísica, Ciência Espacial</h6>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4 mt-md-3 mt-6 move-on-hover">
-            <a href="#">
-                <img class="w-100" src="{% static '/assets/img/categoria/c66.jpg' %}" alt="aboutus">
-              <div class="mt-2 ms-2">
-                <h6 class="mb-0">Engenharia e Tecnologia</h6>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-4 mt-md-3 mt-6 move-on-hover">
-            <a href="#">
-              
-               <img class="w-100" src="{% static '/assets/img/categoria/c77.jpg' %}" alt="aboutus">
-            
-              <div class="mt-2 ms-2">
-                <h6 class="mb-0">Comércio, Gestão, Turismo e Serviços</h6>
-              </div>
-            </a>
-          </div>
 
-          <div class="col-md-4 mt-md-3 mt-6 move-on-hover">
-            <a href="#">
-              
-                <img class="w-100" src="{% static '/assets/img/categoria/c88.jpg' %}" alt="aboutus">
-             
-              <div class="mt-2 ms-2">
-                <h6 class="mb-0">
-              Língua, Comunicação e Cultura</h6>
-              </div>
-            </a>
-          </div>
-
+              <div class="col-lg-4 col-md-4 mt-md-0 mt-5 move-on-hover">
+              <a href="javascript:;">
+                <div class="card card-background card-background-mask-dark">
+                  <div class="full-background" style="background-image: url('../static/assets/img/categoria/c11.jpeg')"></div>
+                  <div class="card-body pt-7 text-center">
+                    <h3 class="text-white"> Ciências Agrárias e Veterinárias</h3>
+                    <p class="text-white opacity-8"></p>
+                    <button type="button" class="btn btn-white btn-sm mt-3">SAIBA MAIS</button>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-md-4 mt-md-0 mt-5 move-on-hover">
+              <a href="javascript:;">
+                <div class="card card-background card-background-mask-dark">
+                  <div class="full-background" style="background-image: url('../static/assets/img/categoria/c22.jpg')"></div>
+                  <div class="card-body pt-7 text-center">
+                    <h3 class="text-white"> Ciências Biológicas e Saúde</h3>
+                    <p class="text-white opacity-8"></p>
+                    <button type="button" class="btn btn-white btn-sm mt-3">SAIBA MAIS</button>
+                  </div>
+                </div>
+              </a>
+            </div>
+         
+             <div class="col-lg-4 col-md-4 mt-md-0 mt-5 move-on-hover">
+              <a href="javascript:;">
+                <div class="card card-background card-background-mask-dark">
+                  <div class="full-background" style="background-image: url('../static/assets/img/categoria/c55.jpg')"></div>
+                  <div class="card-body pt-7 text-center">
+                    <h3 class="text-white"> Astronomia, Astrofísica, Ciência Espacial</h3>
+                    <p class="text-white opacity-8"></p>
+                    <button type="button" class="btn btn-white btn-sm mt-3">SAIBA MAIS</button>
+                  </div>
+                </div>
+              </a>
+            </div>
+        
+                <div class="col-lg-4 col-md-4 mt-md-3 mt-5 move-on-hover">
+              <a href="javascript:;">
+                <div class="card card-background card-background-mask-dark">
+                  <div class="full-background" style="background-image: url('../static/assets/img/categoria/c66.jpg')"></div>
+                  <div class="card-body pt-7 text-center">
+                    <h3 class="text-white"> Engenharia e </br> Tecnologia</h3>
+                    <p class="text-white opacity-8"></p>
+                    <button type="button" class="btn btn-white btn-sm mt-3">SAIBA MAIS</button>
+                  </div>
+                </div>
+              </a>
+            </div>
+         
+              <div class="col-lg-4 col-md-4 mt-md-3 mt-5 move-on-hover">
+              <a href="javascript:;">
+                <div class="card card-background card-background-mask-dark">
+                  <div class="full-background" style="background-image: url('../static/assets/img/categoria/c77.jpg')"></div>
+                  <div class="card-body pt-7 text-center">
+                    <h3 class="text-white"> Comércio, Gestão, Turismo e Serviços</h3>
+                    <p class="text-white opacity-8"></p>
+                    <button type="button" class="btn btn-white btn-sm mt-3">SAIBA MAIS</button>
+                  </div>
+                </div>
+              </a>
+            </div>
+          
+            <div class="col-lg-4 col-md-4 mt-md-3 mt-5 move-on-hover">
+              <a href="javascript:;">
+                <div class="card card-background card-background-mask-dark">
+                  <div class="full-background" style="background-image: url('../static/assets/img/categoria/c88.jpg')"></div>
+                  <div class="card-body pt-7 text-center">
+                    <h3 class="text-white"> Língua, Comunicação e Cultura</h3>
+                    <p class="text-white opacity-8"></p>
+                    <button type="button" class="btn btn-white btn-sm mt-3">SAIBA MAIS</button>
+                  </div>
+                </div>
+              </a>
+            </div>
+          
+         
         </div>
       </div>
 
