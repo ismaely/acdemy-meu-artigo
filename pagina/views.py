@@ -9,6 +9,10 @@ def index(request):
     return render(request, 'pagina/index.html', context)
 
 
+def about_us(request):
+    context = {}
+    return render(request, 'pagina/about.html', context)
+
 
 def registar(request):
     context = {}
