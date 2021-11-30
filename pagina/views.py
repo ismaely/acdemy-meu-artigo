@@ -1,10 +1,21 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from pagina.forms import Pesquisa_Forms
 
 # Create your views here.
 
 def index(request):
+    form = Pesquisa_Forms(request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            categoria = form.cleaned_data.get('categoria')
+            tipo = form.cleaned_data.get('tipo')
+            titulo = form.cleaned_data.get('titulo')
+            
+            context = {}
+            return render(request, 'pagina/resultado_pesquisa.html', context)
+
     context = {}
     return render(request, 'pagina/index.html', context)
 
