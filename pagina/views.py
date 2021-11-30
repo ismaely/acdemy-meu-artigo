@@ -1,19 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from pagina.models import Documenmto
 from pagina.forms import Pesquisa_Forms
 
 # Create your views here.
 
 def index(request):
     form = Pesquisa_Forms(request.POST or None)
-    if request.method == 'POST':
-        if form.is_valid():
-            categoria = form.cleaned_data.get('categoria')
-            tipo = form.cleaned_data.get('tipo')
-            titulo = form.cleaned_data.get('titulo')
-            context = {}
-            return render(request, 'pagina/resultado_pesquisa.html', context)
+   
     context = {'form': form}
     return render(request, 'pagina/index.html', context)
 
@@ -25,7 +20,8 @@ def resultado_pesquisa(request):
             categoria = form.cleaned_data.get('categoria')
             tipo = form.cleaned_data.get('tipo')
             titulo = form.cleaned_data.get('titulo')
-            context = {}
+            lista = Documenmto.objects.select_related().filter(titulo=titulo, categoria=categoria, tipo=tipo).all()
+            context = {'lista': lista}
             return render(request, 'pagina/resultado_pesquisa.html', context)
     context = {'form': form}
     return render(request, 'pagina/resultado_pesquisa.html', context)
@@ -48,10 +44,14 @@ def loginUser(request):
 
 
 def service(request):
-    context = {}
+    form = Pesquisa_Forms(request.POST or None)
+   
+    context = {'form': form}
     return render(request, 'pagina/service.html', context)
 
 
 def parceiros(request):
-    context = {}
+    form = Pesquisa_Forms(request.POST or None)
+   
+    context = {'form': form}
     return render(request, 'pagina/parceiros.html', context)

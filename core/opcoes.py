@@ -1,9 +1,12 @@
 
 CATEGORIA = (
     ('Saúde', 'Saúde'),
+    ('Direito', 'Direito'),
     ('Ciência', 'Ciência'),
     ('Biológia', 'Biológia'),
     ('Cultura', 'Cultura'),
+    ('Química', 'Química'),
+    ('Telecomunicações', 'Telecomunicações'),
 )
 
 TIPO = (

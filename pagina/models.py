@@ -21,5 +21,5 @@ class Documenmto(models.Model):
     arquivo = models.FileField(upload_to='uploads/%Y/', blank=True, null=True)
 
     def __str__ (self):
-        return self.id
+        return "%d" % (self.id)
 

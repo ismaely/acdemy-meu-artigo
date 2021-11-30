@@ -23,7 +23,7 @@
   </div>
   <div class="card card-body  shadow-blur mx-3 mx-md-4 mt-n6 mb-n3">
     <div class="container">
-        <form class="" method="post" action="#">
+        <form class=""  action="{% url 'pagina:resultado_pesquisa'%}" method="post">
       <div class="row border-radius-md pb-4 p-3 mx-sm-0 mx-1 position-relative">
       {% csrf_token %} {% autoescape on %}
         <div class="col-lg-3 mt-lg-n2 mt-2">
@@ -43,7 +43,7 @@
         </div>
         <div class="col-lg-3 mt-lg-n2 mt-2">
           <label>&nbsp;</label>
-          <button type="button" class="btn bg-gradient-info w-100 mb-0">Pesquisar</button>
+          <button type="submit" class="btn bg-gradient-info w-100 mb-0">Pesquisar</button>
         </div>
         {% endautoescape %}
       </div>
