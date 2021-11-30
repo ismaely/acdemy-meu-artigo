@@ -29,26 +29,17 @@
         <div class="col-lg-3 mt-lg-n2 mt-2">
           <div class="input-group input-group-static mb-4 ">
           <label class="font-weight-bolder"><h5>Titulo</h5> </label>
-          <input class="form-control" placeholder="Titulo" type="text" >
+           {{ form.titulo }} {{ form.titulo.errors }}
         </div>
         </div>
         <div class="col-lg-3 mt-lg-n2 mt-2">
           <label class="ms-0 font-weight-bolder"> <h5>Categoria</h5>  </label>
-          <select class="form-control" name="choices-to" id="choices-to">
-            <option value="Choice 1" selected="">Saúde</option>
-            <option value="Choice 2">Ciência</option>
-            <option value="Choice 3">Biológia</option>
-            <option value="Choice 4">Cultura</option>
-          </select>
+          {{ form.categoria }} {{ form.categoria.errors }}
+         
         </div>
         <div class="col-lg-2 mt-lg-n2 mt-2">
           <label class="ms-0 font-weight-bolder"> <h5>Tipo</h5>  </label>
-          <select class="form-control" name="choices-to" id="choices-to">
-            <option value="Choice 1" selected="">Monografia</option>
-            <option value="Choice 2">Dissertação</option>
-            <option value="Choice 2">Relatórios</option>
-             <option value="Choice 2">Artigos</option>
-          </select>
+         {{ form.tipo }} {{ form.tipo.errors }}
         </div>
         <div class="col-lg-3 mt-lg-n2 mt-2">
           <label>&nbsp;</label>

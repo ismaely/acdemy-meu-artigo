@@ -12,12 +12,23 @@ def index(request):
             categoria = form.cleaned_data.get('categoria')
             tipo = form.cleaned_data.get('tipo')
             titulo = form.cleaned_data.get('titulo')
-            
             context = {}
             return render(request, 'pagina/resultado_pesquisa.html', context)
-
-    context = {}
+    context = {'form': form}
     return render(request, 'pagina/index.html', context)
+
+
+def resultado_pesquisa(request):
+    form = Pesquisa_Forms(request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            categoria = form.cleaned_data.get('categoria')
+            tipo = form.cleaned_data.get('tipo')
+            titulo = form.cleaned_data.get('titulo')
+            context = {}
+            return render(request, 'pagina/resultado_pesquisa.html', context)
+    context = {'form': form}
+    return render(request, 'pagina/resultado_pesquisa.html', context)
 
 
 def about_us(request):
