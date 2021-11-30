@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from pagina.models import Documenmto
 from pagina.forms import Pesquisa_Forms
+from django.db.models import Count, Exists, Q
 
 # Create your views here.
 
@@ -20,8 +21,9 @@ def resultado_pesquisa(request):
             categoria = form.cleaned_data.get('categoria')
             tipo = form.cleaned_data.get('tipo')
             titulo = form.cleaned_data.get('titulo')
-            lista = Documenmto.objects.select_related().filter(titulo=titulo, categoria=categoria, tipo=tipo).all()
-            context = {'lista': lista}
+            #resp = Profissao.objects.select_related('estudante').filter(Q(estudante__pessoa__bi__contains=bi) | Q(estudante__pessoa__passaporte=bi) | Q(estudante__numero_estudante__contains=bi) )
+            lista = Documenmto.objects.select_related().filter(Q(titulo__contains=titulo) | Q(categoria=categoria) | Q(tipo=tipo)).all()
+            context = {'form': form,'lista': lista}
             return render(request, 'pagina/resultado_pesquisa.html', context)
     context = {'form': form}
     return render(request, 'pagina/resultado_pesquisa.html', context)

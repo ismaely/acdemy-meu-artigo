@@ -3,60 +3,67 @@
   <div class="page-header min-height-400" style="background-image: url('static/assets/img/banners/b1.jpg')" loading="lazy">
     <span class="mask bg-gradient-dark opacity-8"></span>
   </div>
+  <div class="card card-body shadow-blur mx-3 mx-md-4 mt-n10 mb-n3">
+    <div class="container">
+      <form class="" action="{% url 'pagina:resultado_pesquisa'%}" method="post">
+        <div class="row border-radius-md pb-4 p-3 mx-sm-0 mx-1 position-relative">
+          {% csrf_token %} {% autoescape on %}
+          <div class="col-lg-3 mt-lg-n2 mt-2">
+            <div class="input-group input-group-static mb-4">
+              <label class="font-weight-bolder"><h5>Titulo</h5> </label>
+              {{ form.titulo }} {{ form.titulo.errors }}
+            </div>
+          </div>
+          <div class="col-lg-3 mt-lg-n2 mt-2">
+            <label class="ms-0 font-weight-bolder"> <h5>Categoria</h5> </label>
+            {{ form.categoria }} {{ form.categoria.errors }}
+          </div>
+          <div class="col-lg-2 mt-lg-n2 mt-2">
+            <label class="ms-0 font-weight-bolder"> <h5>Tipo</h5> </label>
+            {{ form.tipo }} {{ form.tipo.errors }}
+          </div>
+          <div class="col-lg-3 mt-lg-n2 mt-2">
+            <label>&nbsp;</label>
+            <button type="submit" class="btn bg-gradient-info w-100 mb-0">Pesquisar</button>
+          </div>
+          {% endautoescape %}
+        </div>
+      </form>
+    </div>
+  </div>
 </header>
 
 <section class="py-4">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 mx-auto text-center">
-        <h2 class="text-gradient text-primary mb-3">12,679+ de pesquisa</h2>
+        <h2 class="text-gradient text-primary mb-3">+ 129 de pesquisa</h2>
       </div>
     </div>
-    <div class="row mt-4">
+    <div class="row mt-2">
+      {% for dados in lista %}
       <div class="col-lg-10 col-md-8">
         <div class="card card-plain">
           <div class="card-body">
             <div class="author">
               <div class="name">
-                <h6 class="mb-0 font-weight-bolder"><a href=""> Samuel Kamuli, </a></h6>
-                <div class="stats"><i class="far fa-clock"></i> 1 day ago</div>
+                <h6 class="mb-0 font-weight-bolder"><a href=""> {{ dados.categoria }}, {{ dados.titulo }}</a></h6>
+                <div class="stats"><i class="far fa-clock"></i> {{ dados.ano }}</div>
               </div>
             </div>
-            <p class="mt-4">"This is an excellent product, the documentation is excellent and helped me get things done more efficiently."</p>
+            <p class="mt-2">{{ dados.resumo|truncatewords:45 }}</p>
             <a href="#" class="text-primary icon-move-right">
-              Read more
+              Saiba Mais
               <i class="fas fa-arrow-right text-sm ms-1"></i>
             </a>
             <div class="rating mt-2">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="col-lg-10 col-md-8">
-        <div class="card card-plain">
-          <div class="card-body">
-            <div class="author">
-              <div class="name">
-                <h6 class="mb-0 font-weight-bolder"><a href=""> Samuel Kamuli, </a></h6>
-                <div class="stats"><i class="far fa-clock"></i> 3 weeks ago</div>
-              </div>
-            </div>
-            <p class="mt-2">
-              "Great product. Helped me cut the time to set up a site. I used the components within instead of starting from scratch. I highly recommend for developers who want to
-              spend more time on the backend!."
-            </p>
-            <div class="rating mt-3">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
     <hr class="horizontal dark my-5" />
   </div>
