@@ -32,4 +32,4 @@ def service(request):
 
 def parceiros(request):
     context = {}
-    return render(request, 'pagina/sign.html', context)
+    return render(request, 'pagina/parceiros.html', context)
