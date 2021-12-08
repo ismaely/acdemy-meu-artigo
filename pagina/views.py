@@ -57,3 +57,10 @@ def parceiros(request):
    
     context = {'form': form}
     return render(request, 'pagina/parceiros.html', context)
+
+
+def visualizar(request, pk):
+    resp = Documenmto.objects.get(id=pk)
+   
+    context = {'resp': resp}
+    return render(request, 'pagina/visualizar.html', context)

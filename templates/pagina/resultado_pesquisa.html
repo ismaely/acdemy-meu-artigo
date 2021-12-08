@@ -9,12 +9,7 @@
         <div class="row border-radius-md pb-4 p-3 mx-sm-0 mx-1 position-relative">
           {% csrf_token %} {% autoescape on %}
           <div class="col-lg-3 mt-lg-n2 mt-2">
-            <div class="input-group input-group-static mb-4">
-              <label class="font-weight-bolder"><h5>Titulo</h5> </label>
-              {{ form.titulo }} {{ form.titulo.errors }}
-            </div>
-          </div>
-          <div class="col-lg-3 mt-lg-n2 mt-2">
+            index
             <label class="ms-0 font-weight-bolder"> <h5>Categoria</h5> </label>
             {{ form.categoria }} {{ form.categoria.errors }}
           </div>
@@ -37,7 +32,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 mx-auto text-center">
-        <h2 class="text-gradient text-primary mb-3">+ 129 de pesquisa</h2>
+        <!--<h2 class="text-gradient text-primary mb-3">+ 129 de pesquisa</h2>-->
       </div>
     </div>
     <div class="row mt-2">
@@ -52,7 +47,7 @@
               </div>
             </div>
             <p class="mt-2">{{ dados.resumo|truncatewords:45 }}</p>
-            <a href="#" class="text-primary icon-move-right">
+            <a href="{% url 'pagina:visualizar' dados.id %}" class="text-primary icon-move-right">
               Saiba Mais
               <i class="fas fa-arrow-right text-sm ms-1"></i>
             </a>
