@@ -44,7 +44,6 @@ def loginUser(request):
     return render(request, 'pagina/sign.html', context)
 
 
-
 def service(request):
     form = Pesquisa_Forms(request.POST or None)
    
