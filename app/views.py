@@ -15,4 +15,4 @@ from django.db.models import Count, Exists, Q
 def index(request):
    
     context = {}
-    return render(request, 'pagina/index.html', context)
+    return render(request, 'app/index.html', context)
