@@ -8,6 +8,9 @@ Author URL:
 
   <head>
     <meta charset="utf-8" />
+    <meta name="description" content="repositorio científico angolano" />
+    <meta name="keywords" content="angola, educação, monografias, repositório, cientifico" />
+    <meta name="author" content="gunza ismael" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="icon" type="image/png" href="{% static '/asset/imges/icons.png' %}" />
     <title>REPOSITÓRIO INTEGRADO CIÉNTIFICO & ACADÉMICO DE ANGOLA</title>
@@ -42,17 +45,17 @@ Author URL:
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="{% url 'pagina:index' %}">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{% url 'app:index' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link effect-3" href="#">Serviços</a>
+                  <a class="nav-link effect-3" href="{% url 'app:servicos' %}">Serviços</a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link effect-3" href="#">Parcerias</a>
+                  <a class="nav-link effect-3" href="{% url 'app:index' %}">Parcerias</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link effect-3" href="#">Sobre Nós</a>
+                  <a class="nav-link effect-3" href="{% url 'app:index' %}">Sobre Nós</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link effect-3" href="#"><b>Login</b></a>

@@ -13,6 +13,15 @@ from django.db.models import Count, Exists, Q
 
 
 def index(request):
-   
     context = {}
     return render(request, 'app/index.html', context)
+
+
+def service(request):
+    context = {}
+    return render(request, 'app/service.html', context)
+
+
+def loginUser(request):
+    context = {}
+    return render(request, 'app/login.html', context)
