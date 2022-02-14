@@ -4,7 +4,7 @@ from . import views
 
 app_name = 'pagina'
 urlpatterns = [
-    path('', views.index, name="index"),
+    path('index/', views.index, name="index"),
     path('registar/', views.registar, name="registar-se"),
     path('loginUser/', views.loginUser, name="loginUser"),
     path('service', views.service, name="service"),
