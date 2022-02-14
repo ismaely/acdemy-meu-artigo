@@ -1,0 +1,167 @@
+<!--
+Author: SOFIL WEB
+Author URL: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" type="image/png" href="{% static '/asset/imges/icons.png' %}" />
+    <title>REPOSITÓRIO INTEGRADO CIÉNTIFICO & ACADÉMICO DE ANGOLA</title>
+    <link rel="stylesheet" href="{% static '/asset/css/style-starter.css' %}" />
+    <link href="//fonts.googleapis.com/css?family=Hind:400,500,600,700&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!--//top-header-content-->
+    <div class="template">
+      <header id="site-header" class="fixed-top">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-dark stroke">
+            <a class="navbar-brand" href="#">
+              <span class="fa fa-lightbulb-o"></span>
+              <!--<img src="{% static '/assets/images/icon.png' %}" class="img-fluid"   
+                        style="border-radius: 70%; vertical-align: middle; width: 50px;  height: 50px;">-->
+              BANTUS
+            </a>
+            <button
+              class="navbar-toggler bg-gradient"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarTogglerDemo02"
+              aria-controls="navbarTogglerDemo02"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon fa fa-bars"> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'pagina:index' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link effect-3" href="#">Serviços</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link effect-3" href="#">Parcerias</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link effect-3" href="#">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link effect-3" href="#"><b>Login</b></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <!--//top-header-content-->
+    {% block corpo %} {% endblock %}
+
+    <!-- //content-6-section -->
+
+    <!-- footer -->
+    <footer class="w3l-footer-16">
+      <div class="footer-content py-lg-5 py-4 text-center">
+        <div class="container">
+          <div class="copy-right">
+            <h6><span class="fa fa-heart" aria-hidden="true"></span> love Designed by <a href="#">SOFIL WEB</a></h6>
+            <ul class="footer-gd-16">
+              <li>© 2020 <b> Repositório Integrado Científico & Académico de Angola.</b></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms</a></li>
+            </ul>
+          </div>
+          <button onclick="topFunction()" id="movetop" title="Go to top">
+            <span class="fa fa-angle-up"></span>
+          </button>
+        </div>
+      </div>
+
+      <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+          scrollFunction();
+        };
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("movetop").style.display = "block";
+          } else {
+            document.getElementById("movetop").style.display = "none";
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+      </script>
+      <!-- //move top -->
+      <script>
+        $(function () {
+          $(".navbar-toggler").click(function () {
+            $("body").toggleClass("noscroll");
+          });
+        });
+      </script>
+    </footer>
+    <!-- //footer -->
+  </body>
+</html>
+
+<script src="{% static '/asset/js/jquery-3.3.1.min.js' %}"></script>
+<!-- disable body scroll which navbar is in active -->
+
+<!--//-->
+<script>
+  $(function () {
+    $(".navbar-toggler").click(function () {
+      $("body").toggleClass("noscroll");
+    });
+  });
+</script>
+<!--/MENU-JS-->
+<script>
+  $(window).on("scroll", function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 80) {
+      $("#site-header").addClass("nav-fixed");
+    } else {
+      $("#site-header").removeClass("nav-fixed");
+    }
+  });
+
+  //Main navigation Active Class Add Remove
+  $(".navbar-toggler").on("click", function () {
+    $("header").toggleClass("active");
+  });
+  $(document).on("ready", function () {
+    if ($(window).width() > 991) {
+      $("header").removeClass("active");
+    }
+    $(window).on("resize", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+    });
+  });
+</script>
+<!--//MENU-JS-->
+<!-- /aos -->
+<script src="{% static '/asset/js/aos.js' %}"></script>
+<script src="{% static '/asset/js/aosindex.js' %}"></script>
+<!-- //aos -->
+
+<script src="{% static '/asset/js/bootstrap.min.js' %}"></script>

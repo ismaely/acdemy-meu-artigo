@@ -2,66 +2,8 @@
 Author: SOFIL WEB
 Author URL: 
 -->
-<!doctype html>
-<html lang="en">
-    {% load static %}
 
-<head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="{% static '/asset/imges/icons.png' %}">
-	<title>REPOSITÓRIO INTEGRADO CIÉNTIFICO & ACADÉMICO DE ANGOLA </title>
-	<!-- Template CSS -->
-	<link rel="stylesheet" href="{% static '/asset/css/style-starter.css' %}">
-	<!-- Template CSS -->
-	<link href="//fonts.googleapis.com/css?family=Hind:400,500,600,700&display=swap" rel="stylesheet">
-	<!-- Template CSS -->
-
-</head>
-
-<body>
-	<!--/top-header-content-->
-	<div class="template">
-		<header id="site-header" class="fixed-top">
-			<div class="container">
-				<nav class="navbar navbar-expand-lg navbar-dark stroke">
-					<a class="navbar-brand" href="#">
-						<span class="fa fa-lightbulb-o"></span>
-                        <!--<img src="{% static '/assets/images/icon.png' %}" class="img-fluid"   
-                        style="border-radius: 70%; vertical-align: middle; width: 50px;  height: 50px;">-->
-                        BANTUS
-					</a>
-					<button class="navbar-toggler bg-gradient" type="button" data-toggle="collapse"
-						data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-						aria-label="Toggle navigation"><span class="navbar-toggler-icon fa fa-bars"> </span>
-					</button>
-
-					<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-						<ul class="navbar-nav ml-auto">
-							<li class="nav-item active">
-								<a class="nav-link" href="{% url 'pagina:index' %}">Home <span class="sr-only">(current)</span></a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link effect-3" href="#">Serviços</a>
-							</li>
-						
-							<li class="nav-item">
-								<a class="nav-link effect-3" href="#">Parcerias</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link effect-3" href="#">Sobre Nós</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link effect-3" href="#"><b>Login</b></a>
-							</li>
-						</ul>
-
-					</div>
-				</nav>
-			</div>
-		</header>
-	</div>
+ {% extends 'baseApp.html' %}  {% block corpo %} {% load static %}
 	<!--//top-header-content-->
 	<!--w3l-banner-slider-->
 	<section class="w3l-banner-main">
@@ -207,46 +149,33 @@ Author URL:
 					</div>
 					<div class="col-lg-6 macbook-right my-lg-5 py-lg-5 py-4" data-aos="fade-down">
 						<h3 class="hny-title mb-lg-5">
-							Provide even better customer service.</h3>
-						<div class="row macbook-right-grids mb-lg-5 mb-4">
-							<div class="col-md-2 macbook-right-icon">
-								<div class="macbook-icon">
-									<span class="fa fa-clock-o"></span>
-								</div>
-							</div>
+							TEMAS PESQUISADOS.
+						</h3>
+						<div class="row macbook-right-grids mb-lg-3 mb-3">
+							
 							<div class="col-md-10 macbook-right-info">
-								<h6><a href="#">Get your own time</a></h6>
-								<p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio
-									consectetur
-									adipisicing elit.</p>
+								<h6><a href="#">Direito Constitucional</a></h6>
 							</div>
 
 						</div>
-						<div class="row macbook-right-grids mb-5 mt-lg-0 mt-5">
-							<div class="col-md-2 macbook-right-icon">
-								<div class="macbook-icon">
-									<span class="fa fa-podcast"></span>
-								</div>
-							</div>
+						<div class="row macbook-right-grids mb-3 mt-lg-0 mt-3">
+							
 							<div class="col-md-10 macbook-right-info">
-								<h6><a href="#">Easy User Interface</a></h6>
-								<p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio
-									consectetur
-									adipisicing elit.</p>
+								<h6><a href="#">Autarquias Locais</a></h6>
+							</div>
+
+						</div>
+						<div class="row macbook-right-grids mb-3 mb-lg-3 mb-3">
+							
+							<div class="col-md-10 macbook-right-info">
+								<h6><a href="#">Direito Constitucional</a></h6>
 							</div>
 
 						</div>
 						<div class="row macbook-right-grids mb-lg-0 mb-4">
-							<div class="col-md-2 macbook-right-icon">
-								<div class="macbook-icon">
-									<span class="fa fa-database"></span>
-								</div>
-							</div>
+							
 							<div class="col-md-10 macbook-right-info">
-								<h6><a href="#">Quick Access</a></h6>
-								<p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio
-									consectetur
-									adipisicing elit.</p>
+								<h6><a href="#">Gestão de recursos Humanos</a></h6>
 							</div>
 
 						</div>
@@ -295,103 +224,5 @@ Author URL:
 		<!--//download-->
 	</section>
 	<!--//w3l-download-main-->
-	<!-- footer -->
-	<footer class="w3l-footer-16">
-		<div class="footer-content py-lg-5 py-4 text-center">
-			<div class="container">
-				<div class="copy-right">
-					<h6><span class="fa fa-heart" aria-hidden="true"></span> love Designed by <a
-						href="#">SOFIL WEB</a> </h6>
-					<ul class="footer-gd-16">
-						<li>© 2020 <b> Repositório Integrado Científico & Académico de Angola.</b> </li>
-						<li><a href="#">Support</a></li>
-						<li><a href="#">Privacy</a></li>
-						<li><a href="#">Terms</a></li>
-					</ul>
-				</div>
-				<button onclick="topFunction()" id="movetop" title="Go to top">
-					<span class="fa fa-angle-up"></span>
-				</button>
-			</div>
-		</div>
 
-		<!-- move top -->
-		<script>
-			// When the user scrolls down 20px from the top of the document, show the button
-			window.onscroll = function () {
-				scrollFunction()
-			};
-
-			function scrollFunction() {
-				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-					document.getElementById("movetop").style.display = "block";
-				} else {
-					document.getElementById("movetop").style.display = "none";
-				}
-			}
-
-			// When the user clicks on the button, scroll to the top of the document
-			function topFunction() {
-				document.body.scrollTop = 0;
-				document.documentElement.scrollTop = 0;
-			}
-		</script>
-		<!-- //move top -->
-		<script>
-			$(function () {
-				$('.navbar-toggler').click(function () {
-					$('body').toggleClass('noscroll');
-				})
-			});
-		</script>
-	</footer>
-	<!-- //footer -->
-</body>
-
-</html>
-
-<script src="{% static '/asset/js/jquery-3.3.1.min.js' %}"></script>
-<!-- disable body scroll which navbar is in active -->
-
-<!--//-->
-<script>
-	$(function () {
-		$('.navbar-toggler').click(function () {
-			$('body').toggleClass('noscroll');
-		})
-	});
-</script>
-<!--/MENU-JS-->
-<script>
-	$(window).on("scroll", function () {
-		var scroll = $(window).scrollTop();
-
-		if (scroll >= 80) {
-			$("#site-header").addClass("nav-fixed");
-		} else {
-			$("#site-header").removeClass("nav-fixed");
-		}
-	});
-
-	//Main navigation Active Class Add Remove
-	$(".navbar-toggler").on("click", function () {
-		$("header").toggleClass("active");
-	});
-	$(document).on("ready", function () {
-		if ($(window).width() > 991) {
-			$("header").removeClass("active");
-		}
-		$(window).on("resize", function () {
-			if ($(window).width() > 991) {
-				$("header").removeClass("active");
-			}
-		});
-	});
-</script>
-<!--//MENU-JS-->
-<!-- /aos -->
-<script src="{% static '/asset/js/aos.js' %}"></script>
-<script src="{% static '/asset/js/aosindex.js' %}"></script>
-<!-- //aos -->
-
-<script src="{% static '/asset/js/bootstrap.min.js' %}"></script>
+	{% endblock %}
