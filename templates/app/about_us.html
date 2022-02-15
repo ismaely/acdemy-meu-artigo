@@ -1,0 +1,77 @@
+<!--
+@author [Gunza Ismael]
+@email [7ilip@gmail.com]
+@create date 2022-02-15 10:21:21
+@modify date 2022-02-15 10:58:27
+@desc [description]
+-->
+
+{% extends 'baseApp.html' %} {% block corpo %} {% load static %}
+<section class="w3l-inner-page-main">
+  <div class="breadcrumb-infhny-sobre-nos">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <h2 class="hny-title text-center"><span>Sobre Nós</span></h2>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<section class="w3l-contact-main">
+  <div class="contact-infhny py-5">
+    <div class="container py-lg-3">
+      <div class="">
+        <div class="cont-details">
+          <div class="cont-top london text-center" data-aos="fade-up">
+            <h6><span class="fa fa-map-marker"></span> QUEM SOMOS</h6>
+            <p>
+              O repositório integrado científico e académico teve a sua concepção em 2012 pelo seu fundador e CEO Engº WIK TANIMOR DOS SANTOS KAPACETE e teve a sua execução plena
+              em 2021 em parceria com a SOFIL WEB Empresa executora. O R.I.C.A- é a maior plataforma digital integrada Angolana do fórum académico e não só, proporcionando a
+              comunidade académica uma vasta biblioteca virtual uma rede integrada de serviços digitais de investigação e ajuda académica
+            </p>
+          </div>
+          <div class="cont-top paris text-center" data-aos="fade-up">
+            <h6><span class="fa fa-map-marker"></span> MISSÃO</h6>
+            <p>A nossa missão é fazer chegar o conhecimento por meio do mundo digital a todos os cantos do globo.</p>
+            <p><a href="#">+244 222 721 466 / + 244 916121016</a></p>
+            <p><a href="#">Endereço: Av Murtala Mohamed, 35</a></p>
+          </div>
+          <div class="cont-top newyork text-center" data-aos="fade-up">
+            <h6><span class="fa fa-map-marker"></span> VISÃO</h6>
+            <p>
+              Contribuir para o desenvolvimento da comunidade académica nacional e de forma global para o mundo. Elevar o poder de investigação a nível da sociedade académica
+              agregando o poder do mundo digital Revolucionar as formas de aquisição do conhecimento e adoptar as novas tecnologias ao desenvolvimento da era digital
+            </p>
+
+            <p><a href="mailto:info@example.com"></a></p>
+          </div>
+        </div>
+
+        <div class="map-content-9">
+          <form action="#" method="post">
+            <div class="form-top1">
+              <h3 class="hny-title text-center mb-lg-5 mb-4" data-aos="fade-down">Enviar Sugestão</h3>
+              <div class="form-top">
+                <div class="form-top-left" data-aos="fade-up">
+                  <input type="text" name="w3lName" id="w3lName" placeholder="Nome" required="" />
+
+                  <input type="email" name="w3lSender" id="w3lSender" placeholder="Email*" required="" />
+
+                  <input type="text" name="w3lSubject" id="w3lName" placeholder="Telefone" required="" />
+                </div>
+                <div class="form-top-righ" data-aos="fade-up">
+                  <textarea name="w3lMessage" id="w3lMessage" placeholder="Sugestão*" required=""></textarea>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
