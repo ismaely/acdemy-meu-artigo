@@ -25,3 +25,13 @@ def service(request):
 def loginUser(request):
     context = {}
     return render(request, 'app/login.html', context)
+
+
+def about_us(request):
+    context = {}
+    return render(request, 'app/about_us.html', context)
+
+
+def pesquisar(request):
+    context = {}
+    return render(request, 'app/pesquisar.html', context)

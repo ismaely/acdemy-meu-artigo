@@ -24,7 +24,7 @@ Author URL:
       <header id="site-header" class="fixed-top">
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-dark stroke">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{% url 'app:index' %}">
               <span class="fa fa-lightbulb-o"></span>
               <!--<img src="{% static '/assets/images/icon.png' %}" class="img-fluid"   
                         style="border-radius: 70%; vertical-align: middle; width: 50px;  height: 50px;">-->
@@ -55,7 +55,7 @@ Author URL:
                   <a class="nav-link effect-3" href="{% url 'app:index' %}">Parcerias</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link effect-3" href="{% url 'app:index' %}">Sobre Nós</a>
+                  <a class="nav-link effect-3" href="{% url 'app:about-us' %}">Sobre Nós</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link effect-3" href="{% url 'app:login' %}"><b>Login</b></a>
