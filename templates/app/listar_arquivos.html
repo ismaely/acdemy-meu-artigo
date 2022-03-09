@@ -1,0 +1,45 @@
+{% extends 'home_base.html' %}{% block corpo %}{% load static %}
+<div class="card">
+  <div class="card-header row"><h3>Lista de Arquivos Disponivel</h3></div>
+  <div class="card-body">
+    <table id="advanced_table" class="table">
+      <thead>
+        <tr>
+          <th>Autor</th>
+          <th>Titulo</th>
+          <th>Tipologia</th>
+          <th>Nº de Paginas</th>
+          <th>Data</th>
+          <th class="no-link last"><span class="nobr">Opções</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for dados in lista %}
+        <tr>
+          <td class="">{{ dados.autor|upper }}</td>
+          <td class="">{{ dados.titulo|upper|truncatechars:40 }}</td>
+          <td class="">{{ dados.tipologia|upper }}</td>
+          <td class="">{{ dados.numero_pagina }}</td>
+          <td class="">{{ dados.data|upper }}</td>
+          <td>
+            <ul class="nav nav-pills">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"
+                  >Acção <i class="ik ik-chevron-down"></i
+                ></a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">VISUALIZAR</a>
+
+                  <div class="dropdown-divider"></div>
+                </div>
+              </li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

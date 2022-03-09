@@ -41,8 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_heroku',
+    'sweetify',
     'core',
     'pagina',
+    'app',
 ]
 
 MIDDLEWARE = [

@@ -2,11 +2,11 @@
 @author [Gunza Ismael]
 @email [7ilip@gmail.com]
 @create date 2021-11-10 10:23:04
-@modify date 2021-11-24 18:48:35
+@modify date 2022-02-26 07:36:07
 @desc [description]
 -->
 
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<html lang="en" itemscope itemtype="">
   {% load static %}
   <head>
     <meta charset="utf-8" />
@@ -246,7 +246,8 @@
                 </div>
               </div>
               <div class="card-body">
-                <form role="form" class="text-start">
+                <form role="form" class="text-start" action="{% url 'app:home' %}" method="POST">
+                  {% csrf_token %}
                   <div class="input-group input-group-outline my-3">
                     <label class="form-label">Email</label>
                     <input type="email" class="form-control" />

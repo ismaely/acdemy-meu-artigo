@@ -4,6 +4,7 @@ from django.urls import reverse
 from pagina.models import Documenmto
 from pagina.forms import Pesquisa_Forms
 from django.db.models import Count, Exists, Q
+from app.models import Arquivo
 
 # Create your views here.
 
@@ -14,15 +15,16 @@ def index(request):
     return render(request, 'pagina/index.html', context)
 
 
+
 def resultado_pesquisa(request):
     form = Pesquisa_Forms(request.POST or None)
     if request.method == 'POST':
         if form.is_valid():
-            categoria = form.cleaned_data.get('categoria')
-            tipo = form.cleaned_data.get('tipo')
+            #categoria = form.cleaned_data.get('categoria')
+            #tipo = form.cleaned_data.get('tipo')
             titulo = form.cleaned_data.get('titulo')
             #resp = Profissao.objects.select_related('estudante').filter(Q(estudante__pessoa__bi__contains=bi) | Q(estudante__pessoa__passaporte=bi) | Q(estudante__numero_estudante__contains=bi) )
-            lista = Documenmto.objects.select_related().filter(Q(titulo__contains=titulo) | Q(categoria=categoria) | Q(tipo=tipo)).all()
+            lista = Arquivo.objects.select_related().filter(Q(titulo__contains=titulo)).all()
             context = {'form': form,'lista': lista}
             return render(request, 'pagina/resultado_pesquisa.html', context)
     context = {'form': form}

@@ -3,7 +3,8 @@
   <div class="contact-infhny py-5">
     <div class="container py-lg-3">
       <div class="map-content-9">
-        <form action="#" method="post">
+        <form action="{% url 'app:home' %}" method="POST">
+          {% csrf_token %}
           <div class="form-top1">
             <h3 class="hny-title text-center mb-lg-5 mb-4" data-aos="fade-down">Login User</h3>
 
